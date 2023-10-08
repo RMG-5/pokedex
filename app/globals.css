@@ -1,0 +1,46 @@
+/* ********** ********** ********** ********** ********** ********** ********** */
+/* ESTILOS GLOBALES */
+/* ********** ********** ********** ********** ********** ********** ********** */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: var(--colorBlack);
+}
+
+button {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+:root {
+  --colorBlack: #1c1c1c;
+  --colorGray: #ececec;
+  --colorWhite: #f7f7f7;
+  --typeNormal: #a8a878;
+  --typeFire: #f08030;
+  --typeWater: #6890f0;
+  --typeGrass: #78c850;
+  --typeElectric: #f8d030;
+  --typeIce: #98d8d8;
+  --typeFighting: #c03028;
+  --typePoison: #a040a0;
+  --typeGround: #e0c068;
+  --typeFlying: #a890f0;
+  --typePsychic: #f85888;
+  --typeBug: #a8b820;
+  --typeRock: #b8a038;
+  --typeGhost: #705898;
+  --typeDark: #705848;
+  --typeDragon: #7038f8;
+  --typeSteel: #b8b8d0;
+  --typeFairy: #f0b6bc;
+}
+
+/* ********** ********** ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** ********** ********** */
