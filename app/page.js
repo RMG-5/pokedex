@@ -61,6 +61,10 @@ const MainSection = ({ filterType, setFilterType }) => {
 
 // Utiliza el contenido de "pokemonList" para generar la tarjeta de cada pokemon.
 const Pokemon = ({ pokemonList }) => {
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <>
       {pokemonList.map((pokemon) => (
@@ -79,6 +83,7 @@ const Pokemon = ({ pokemonList }) => {
               width={475}
               height={475}
               alt={pokemon.name}
+              loader={loaderProp}
             />
           </div>
           <div className={styles.pokemonInfo}>
