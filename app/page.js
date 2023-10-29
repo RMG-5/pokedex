@@ -36,18 +36,18 @@ const MainSection = ({ filterType, setFilterType }) => {
   } else if (filterType !== "viewAll") {
     // Se crea una variable "pokemonFilter" para recopilar los pokemon que pasen el filtro.
     let pokemonFilter = [];
-    // Se crea un bucle para revisar los "types" de cada pokemon.
-    for (let i = 0; i < pokeAPI.length; i++) {
+    // Se crea un map para revisar los "types" de cada pokemon.
+    const pokemonType = pokeAPI.map((pokemon) => {
       // Se crea una variable "types" para almacenar los tipos de cada pokemon.
-      const types = pokeAPI[i].types.map((type) => type.type.name);
+      const types = pokemon.types.map((type) => type.type.name);
       // Si por lo menos un "type" del pokemon analizado es igual a "filterType".
       if (types.some((type) => type === filterType)) {
         // Se agrega el pokemon a la variable "pokemonFilter".
-        pokemonFilter.push(pokeAPI[i]);
+        pokemonFilter.push(pokemon);
       }
-      // Cuando el bucle termine la variable "pokemonList" sera igual a la variable "pokemonFilter"
-      pokemonList = [...pokemonFilter];
-    }
+    });
+    // Cuando el map termine la variable "pokemonList" sera igual a la variable "pokemonFilter"
+    pokemonList = [...pokemonFilter];
   }
 
   return (
